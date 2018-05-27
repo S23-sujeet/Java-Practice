@@ -1,0 +1,81 @@
+CHALLENGE: 2 
+
+Lilah has a string, , of lowercase English letters that she repeated infinitely many times.
+
+Given an integer, , find and print the number of letter a's in the first  letters of Lilah's infinite string.
+
+For example, if the string  and , the substring we consider is , the first  characters of her infinite string. There are  occurrences of a in the substring.
+
+Input Format
+
+The first line contains a single string, . 
+The second line contains an integer, .
+
+Constraints
+
+For  of the test cases, .
+Output Format
+
+Print a single integer denoting the number of letter a's in the first  letters of the infinite string created by repeating  infinitely many times.
+
+Sample Input 0
+
+aba
+10
+Sample Output 0
+
+7
+Explanation 0 
+The first  letters of the infinite string are abaabaabaa. Because there are  a's, we print  on a new line.
+
+Sample Input 1
+
+a
+1000000000000
+Sample Output 1
+
+1000000000000
+Explanation 1 
+Because all of the first  letters of the infinite string are a, we print  on a new line.
+
+
+
+
+SOLUTION:
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        int i = 4;
+        double d = 4.0;
+        String s = "HackerRank ";
+
+        Scanner scan = new Scanner(System.in);
+
+        /* Declare second integer, double, and String variables. */
+        int i2;
+        double d2;
+        String s2;
+
+        /* Read and save an integer, double, and String to your variables.*/
+        i2 = scan.nextInt();
+        d2 = scan.nextDouble();
+
+        scan.nextLine();
+        s2 = scan.nextLine();
+
+        /* Print the sum of both integer variables on a new line. */
+        System.out.println(i + i2);
+
+        /* Print the sum of the double variables on a new line. */
+        System.out.println(d + d2);
+
+        /* Concatenate and print the String variables on a new line;
+            the 's' variable above should be printed first. */
+        System.out.println(s.concat(s2));
+
+        scan.close();
+    }
+}
