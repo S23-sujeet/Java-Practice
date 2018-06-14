@@ -1,0 +1,44 @@
+CHALLENGE: (Java Practice Hackerrank) JAVA DATE AND TIME
+The Calendar class is an abstract class that provides methods for converting between a specific instant in time and a set of calendar fields such as YEAR, MONTH, DAY_OF_MONTH, HOUR, and so on, and for manipulating the calendar fields, such as getting the date of the next week.
+You are given a date. You just need to write the method, , which returns the day on that date. To simplify your task, we have provided a portion of the code in the editor.
+
+For example, if you are given the date Aug 14 2017 , the method should return WEDNESDAY as the day on that date.
+
+Input Format
+A single line of input containing the space separated month, day and year, respectively, in MM DD YYYY format.
+
+Output Format
+Output the correct day in capital letters.
+
+Sample Input
+08 05 2015
+
+Sample Output
+WEDNESDAY
+
+
+
+SOLUTION:
+
+import java.util.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+class DayOfWeek{
+    public static String getDay(String day, String month, String year){
+    int y = Integer.parseInt(year);
+    int m = Integer.parseInt(month); 
+    int d = Integer.parseInt(day);
+    return java.time.format.DateTimeFormatter.ofPattern("EEEE").format(LocalDate.of(y, m, d)).toUpperCase();
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String month = in.next();
+        String day = in.next();
+        String year = in.next();
+        
+        System.out.println(getDay(day, month, year));
+    }
+}
